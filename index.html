@@ -665,7 +665,7 @@ function renderCrewView() {
       ? `<div class="flight-section">
            <div class="flight-section-label">Flight Number — tap to copy</div>
            <div class="flight-chips-row">
-             ${flightNums.map(fn=>`<div class="flight-chip" onclick="copyFlightChip(this,'${fn}')">${fn}</div>`).join('')}
+             ${flightNums.map(fn=>`<div class="flight-chip" onclick="copyFlightChip(this,'${fn.replace(/^[A-Z]+\s*/i,'')}')">${fn}</div>`).join('')}
            </div>
          </div>` : '';
 
